@@ -17,6 +17,9 @@ app.use("/users", userRoutes);
 app.use("/email", emailRoutes);
 app.use("/unsubscribe", unsubscribeRoutes);
 
+app.get("/", (req,res)=>{
+  res.send("Hello MathonGo Team, This is my assignment for backend developer Intern. Thanks for considering")
+})
 
 mongoose
   .connect(process.env.MONGO_URI, {
