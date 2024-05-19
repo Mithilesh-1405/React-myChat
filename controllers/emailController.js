@@ -1,4 +1,3 @@
-//NOTE : For this emailController to work, it is necessary to follow the steps given in prerequisites.txt
 
 const nodemailer = require('nodemailer');
 

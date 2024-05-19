@@ -3,13 +3,14 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
 
+const app = express();
+app.use(express.json());
+
+//All the routes for API Endpoints
 const listRoutes = require("./routes/listRoutes");
 const userRoutes = require("./routes/userRoutes");
 const emailRoutes = require('./routes/emailRoutes')
 const unsubscribeRoutes = require('./routes/unsubscribeRoutes')
-
-const app = express();
-app.use(express.json());
 
 app.use("/lists", listRoutes);
 app.use("/users", userRoutes);

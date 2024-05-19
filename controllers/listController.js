@@ -1,5 +1,7 @@
 const List = require("../models/list");
 
+
+//Creating a new list with title and custom Properties
 exports.createList = async (req, res) => {
   const { title, customProperties } = req.body;
   console.log(title);

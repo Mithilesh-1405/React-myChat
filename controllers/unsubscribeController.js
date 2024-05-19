@@ -1,6 +1,8 @@
 const User = require('../models/user');
 const List = require('../models/list');
 
+
+//Unsubscribing user by getting the listId and userId
 exports.unsubscribeUser = async (req, res) => {
     const { listId, userId } = req.params;
     console.log(listId, userId)
@@ -15,6 +17,7 @@ exports.unsubscribeUser = async (req, res) => {
             return res.status(404).json({ status: 'error', message: 'User not found' });
         }
 
+        //Unsubscribing user by setting the unscubsribed property to true and saving it in database
         user.unsubscribed = true;
         await user.save();
 
