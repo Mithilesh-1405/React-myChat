@@ -5,6 +5,7 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   properties: { type: Map, of: String, required: true },
+  unsubscribed: { type: Boolean, default: false }
 });
 
 module.exports = mongoose.model("User", userSchema);

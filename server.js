@@ -5,12 +5,17 @@ dotenv.config();
 
 const listRoutes = require("./routes/listRoutes");
 const userRoutes = require("./routes/userRoutes");
+const emailRoutes = require('./routes/emailRoutes')
+const unsubscribeRoutes = require('./routes/unsubscribeRoutes')
 
 const app = express();
 app.use(express.json());
 
 app.use("/lists", listRoutes);
 app.use("/users", userRoutes);
+app.use("/email", emailRoutes);
+app.use("/unsubscribe", unsubscribeRoutes);
+
 
 mongoose
   .connect(process.env.MONGO_URI, {

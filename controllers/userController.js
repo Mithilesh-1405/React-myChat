@@ -37,6 +37,7 @@ exports.addUsers = async (req, res) => {
         name: row.name,
         email: row.email,
         properties,
+        unsubscribed:false
       });
     })
     .on("end", async () => {
