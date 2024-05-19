@@ -47,7 +47,7 @@ exports.sendEmails = async (req, res) => {
             //Iterating each customProperty of the current user
             list.customProperties.forEach((value, key) => {
                 const propValue = user.properties.get(key) || value; 
-                console.log(`Replacing [${key}] with`, propValue);
+                // console.log(`Replacing [${key}] with`, propValue);
                 personalizedBody = personalizedBody.replace(`[${key}]`, propValue);
               });
         

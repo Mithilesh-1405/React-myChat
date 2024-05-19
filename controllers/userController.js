@@ -81,7 +81,8 @@ exports.addUsers = async (req, res) => {
       const totalCount = await User.countDocuments({ listId });
 
       //sending the successfull added users count, errors count, total operations count, and the errorFile
-      res.json({
+      res.json(
+        {
         status: errors.length > 0 ? "partial_success" : "success",
         successCount,
         errorCount,

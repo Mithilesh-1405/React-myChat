@@ -11,11 +11,15 @@ const listRoutes = require("./routes/listRoutes");
 const userRoutes = require("./routes/userRoutes");
 const emailRoutes = require('./routes/emailRoutes')
 const unsubscribeRoutes = require('./routes/unsubscribeRoutes')
+const getUsers = require('./routes/getUserRoute')
+
 
 app.use("/lists", listRoutes);
 app.use("/users", userRoutes);
 app.use("/email", emailRoutes);
 app.use("/unsubscribe", unsubscribeRoutes);
+app.use("/getUsers", getUsers);
+
 
 app.get("/", (req,res)=>{
   res.send("Hello MathonGo Team, This is my assignment for backend developer Intern. Thanks for considering")
